@@ -4,7 +4,7 @@ teste
 *.aar
 *.ap_
 *.aab
-
+.name
 # Files for the ART/Dalvik VM
 *.dex
 
