@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnPorcentagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="40dp"
+        android:text="%"
+        app:layout_constraintBottom_toTopOf="@+id/btnNove"
+        app:layout_constraintStart_toEndOf="@+id/btnInverteSinal"
+        tools:text="%" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="limpaTela"
+        android:text="AC"
+        app:layout_constraintBottom_toTopOf="@+id/btnSete"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="AC" />
+
+    <Button
+        android:id="@+id/btnInverteSinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="inverteSinal"
+        android:text="+/-"
+        app:layout_constraintBottom_toTopOf="@+id/btnOito"
+        app:layout_constraintStart_toEndOf="@+id/btnClear"
+        tools:text="+/-" />
+
+    <Button
+        android:id="@+id/btnDividir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="getOperator"
+        android:text="/"
+        app:layout_constraintBottom_toTopOf="@+id/btnVezes"
+        app:layout_constraintStart_toEndOf="@+id/btnPorcentagem"
+        tools:text="/" />
+
+    <Button
+        android:id="@+id/btnVezes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="getOperator"
+        android:text="X"
+        app:layout_constraintBottom_toTopOf="@+id/btnMenos"
+        app:layout_constraintStart_toEndOf="@+id/btnNove"
+        tools:text="X" />
+
+    <Button
+        android:id="@+id/btnMenos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="getOperator"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/btnMais"
+        app:layout_constraintStart_toEndOf="@+id/btnSeis"
+        tools:text="-" />
+
+    <Button
+        android:id="@+id/btnZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="getNum"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="0" />
+
+    <Button
+        android:id="@+id/btnVirgula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="casaDecimal"
+        android:text="."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnZero"
+        tools:text="," />
+
+    <Button
+        android:id="@+id/btnIgual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="setResult"
+        android:text="="
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnVirgula"
+        tools:text="=" />
+
+    <Button
+        android:id="@+id/btnUm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="getNum"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/btnZero"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="1" />
+
+    <Button
+        android:id="@+id/btnTres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="getNum"
+        android:text="3"
+        app:layout_constraintBottom_toTopOf="@+id/btnVirgula"
+        app:layout_constraintStart_toEndOf="@+id/btnDois"
+        tools:text="3" />
+
+    <Button
+        android:id="@+id/btnQuatro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="getNum"
+        android:text="4"
+        app:layout_constraintBottom_toTopOf="@+id/btnUm"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="4" />
+
+    <Button
+        android:id="@+id/btnCinco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="getNum"
+        android:text="5"
+        app:layout_constraintBottom_toTopOf="@+id/btnDois"
+        app:layout_constraintStart_toEndOf="@+id/btnQuatro"
+        tools:text="5" />
+
+    <Button
+        android:id="@+id/btnSeis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="getNum"
+        android:text="6"
+        app:layout_constraintBottom_toTopOf="@+id/btnTres"
+        app:layout_constraintStart_toEndOf="@+id/btnCinco"
+        tools:text="6" />
+
+    <Button
+        android:id="@+id/btnSete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="getNum"
+        android:text="7"
+        app:layout_constraintBottom_toTopOf="@+id/btnQuatro"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="7" />
+
+    <Button
+        android:id="@+id/btnOito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="getNum"
+        android:text="8"
+        app:layout_constraintBottom_toTopOf="@+id/btnCinco"
+        app:layout_constraintStart_toEndOf="@+id/btnSete"
+        tools:text="8" />
+
+    <Button
+        android:id="@+id/btnNove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="getNum"
+        android:text="9"
+        app:layout_constraintBottom_toTopOf="@+id/btnSeis"
+        app:layout_constraintStart_toEndOf="@+id/btnOito"
+        tools:text="9" />
+
+    <Button
+        android:id="@+id/btnDois"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="getNum"
+        android:text="2"
+        app:layout_constraintBottom_toTopOf="@+id/btnVirgula"
+        app:layout_constraintStart_toEndOf="@+id/btnUm"
+        tools:text="2" />
+
+    <Button
+        android:id="@+id/btnMais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="getOperator"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/btnIgual"
+        app:layout_constraintStart_toEndOf="@+id/btnTres"
+        tools:text="+" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="RESULTADO"
+        app:layout_constraintBottom_toTopOf="@+id/txtResult"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtDisp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/btnPorcentagem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDispOld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtDisp"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
